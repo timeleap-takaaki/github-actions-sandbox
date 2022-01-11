@@ -10,13 +10,10 @@ jobs:
     uses: timeleap-takaaki/github-actions-sandbox/.github/workflows/hello_world_call.yml@main
     with:
       your_name: Bob
+      gh_env: prod
 
   call2:
     uses: timeleap-takaaki/github-actions-sandbox/.github/workflows/hello_world_call.yml@main
     with:
       your_name: Jon
-
-  call3:
-    uses: timeleap-takaaki/github-actions-sandbox/.github/workflows/hello_world_call.yml@main
-    with:
-      your_name: Mary
+      gh_env: prod_1

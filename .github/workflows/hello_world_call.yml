@@ -4,6 +4,10 @@ name: Hello World Call Workflow
 on:
   workflow_call:
     inputs:
+      gh_env:
+        description: 'GitHub Environment'
+        type: string
+        required: true
       your_name:
         description: "Your Name"
         type: string
@@ -13,7 +17,7 @@ jobs:
   
   hello:
     runs-on: ubuntu-latest
-    environment: prod
+    environment: ${{ inputs.gh_env }}
     steps:
       - uses: actions/checkout@v2
 
