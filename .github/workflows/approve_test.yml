@@ -8,3 +8,5 @@ on:
 jobs:
   call:
     uses: timeleap-takaaki/github-actions-sandbox/.github/workflows/hello_world_call.yml@main
+    with:
+      your_name: Bob
