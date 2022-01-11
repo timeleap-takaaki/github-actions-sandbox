@@ -1,12 +1,22 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: approve test
 
 on:
   workflow_dispatch:
 
 jobs:
-  call:
+  call1:
     uses: timeleap-takaaki/github-actions-sandbox/.github/workflows/hello_world_call.yml@main
     with:
       your_name: Bob
+
+  call2:
+    uses: timeleap-takaaki/github-actions-sandbox/.github/workflows/hello_world_call.yml@main
+    with:
+      your_name: Jon
+
+  call3:
+    uses: timeleap-takaaki/github-actions-sandbox/.github/workflows/hello_world_call.yml@main
+    with:
+      your_name: Mary
