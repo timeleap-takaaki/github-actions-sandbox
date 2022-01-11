@@ -7,4 +7,4 @@ on:
 
 jobs:
   call:
-    uses: .github/workflows/hello_world_call.yml@main
+    uses: timeleap-takaaki/github-actions-sandbox/.github/workflows/hello_world_call.yml@main
