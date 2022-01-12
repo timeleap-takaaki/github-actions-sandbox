@@ -1,0 +1,34 @@
+---
+name: Concurrency Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  task_0:
+    runs-on: ubuntu-latest
+    steps:
+      - runs: echo "I'm task 0. not concurrency."
+  
+  task_1:
+    runs-on: ubuntu-latest
+    needs: task_0
+    concurrency:
+      concurrency_group_1
+    steps:
+      -  runs: echo "I'm task 1."
+  
+  task_2:
+    runs-on: ubuntu-latest
+    needs: task_0
+    concurrency:
+      concurrency_group_1
+    steps:
+      - runs: echo "I'm task 2."
+  
+  task_3:
+    runs-on: ubuntu-latest
+    concurrency:
+      concurrency_group_2
+    steps:
+      - runs: echo "I'm task 3."
