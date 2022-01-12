@@ -12,8 +12,8 @@ on:
         description: "Your Name"
         type: string
         required: true
+    secrets:
       token:
-        type: string
         required: true
 
 jobs:
