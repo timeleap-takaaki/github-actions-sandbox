@@ -27,8 +27,10 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world! ${{ inputs.your_name }}
 
-      - if: ${{ inputs.token }} == 'token_1'
+      - name: token1
+        if: inputs.token == 'token_1'
         run: echo "token = token_1"
       
-      - if: ${{ inputs.token }} == 'token_2'
+      - name: token2
+        if: inputs.token == 'token_2'
         run: echo "token = token_2"
