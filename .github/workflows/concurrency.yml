@@ -13,23 +13,17 @@ jobs:
   task_1:
     runs-on: ubuntu-latest
     needs: task_0
-    concurrency:
-      concurrency_group_1
     steps:
       - run: echo "I'm task 1."
   
   task_2:
     runs-on: ubuntu-latest
     needs: task_0
-    concurrency:
-      concurrency_group_1
     steps:
       - run: echo "I'm task 2."
   
   task_3:
     runs-on: ubuntu-latest
-    concurrency:
-      concurrency_group_2
     steps:
       - run: echo "I'm task 3."
   
