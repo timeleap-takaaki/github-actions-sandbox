@@ -28,9 +28,9 @@ jobs:
         run: echo Hello, world! ${{ inputs.your_name }}
 
       - name: token1
-        if: inputs.token == 'token_1'
+        if: secrets.token == 'token_1'
         run: echo "token = token_1"
       
       - name: token2
-        if: inputs.token == 'token_2'
+        if: secrets.token == 'token_2'
         run: echo "token = token_2"
