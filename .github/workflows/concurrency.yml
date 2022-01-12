@@ -8,7 +8,7 @@ jobs:
   task_0:
     runs-on: ubuntu-latest
     steps:
-      - runs: echo "I'm task 0. not concurrency."
+      - run: echo "I'm task 0. not concurrency."
   
   task_1:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
     concurrency:
       concurrency_group_1
     steps:
-      -  runs: echo "I'm task 1."
+      - run: echo "I'm task 1."
   
   task_2:
     runs-on: ubuntu-latest
@@ -24,11 +24,11 @@ jobs:
     concurrency:
       concurrency_group_1
     steps:
-      - runs: echo "I'm task 2."
+      - run: echo "I'm task 2."
   
   task_3:
     runs-on: ubuntu-latest
     concurrency:
       concurrency_group_2
     steps:
-      - runs: echo "I'm task 3."
+      - run: echo "I'm task 3."
