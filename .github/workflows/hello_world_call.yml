@@ -12,8 +12,8 @@ on:
         description: "Your Name"
         type: string
         required: true
-    secrets:
       token:
+        type: string
         required: true
 
 jobs:
@@ -27,4 +27,4 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world! ${{ inputs.your_name }}
 
-      - run: echo "token = ${{ secrets.token }}"
+      - run: echo "token = ${{ inputs.token }}"
