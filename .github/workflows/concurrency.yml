@@ -32,3 +32,8 @@ jobs:
       concurrency_group_2
     steps:
       - run: echo "I'm task 3."
+  
+  task_4:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I'm task 4. not concurrency."
